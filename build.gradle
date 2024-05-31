@@ -57,8 +57,13 @@ subprojects {
             }
         }
         publications {
-            javaMaven(MavenPublication) {
+            release(MavenPublication) {
+                //javaMaven(MavenPublication) {
                 artifactId = archName
+                version = project.version
+//                afterEvaluate {
+//                    //from components.release
+//                }
                 from components.java
             }
         }
